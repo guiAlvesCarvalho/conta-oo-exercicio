@@ -35,21 +35,61 @@ public class Main {
                 }
 
             } else if (opcaoMenu == 2) {
+                double valor;
+                System.out.println("Qual tipo de conta?\n1.Poupança\n2.Investimento");
+                opcaoConta = input.nextInt();
+                if (opcaoConta == 1) {
+                    if ((cp != null)) {
+                        System.out.println("Digite o valor do saque: R$");
+                        valor = input.nextDouble();
+                        cp.sacar(valor);
+                    } else {
+                        System.out.println("Você não possui esta conta");
+                    }
+                } else if (opcaoConta == 2) {
+                    if ((ci != null)) {
+                        System.out.println("Digite o valor do saque: R$");
+                        valor = input.nextDouble();
+                        cp.sacar(valor);
+                    } else {
+                        System.out.println("Você não possui esta conta");
+                    }
+                } else System.out.println("Digite um número válido");
 
             } else if (opcaoMenu == 3) {
+                double valor;
+                System.out.println("Qual tipo de conta?\n1.Poupança\n2.Investimento");
+                opcaoConta = input.nextInt();
+                if (opcaoConta == 1) {
+                    if ((cp != null)) {
+                        System.out.println("Digite o valor do depósito: R$");
+                        valor = input.nextDouble();
+                        cp.depositar(valor);
+                    } else {
+                        System.out.println("Você não possui esta conta");
+                    }
+                } else if (opcaoConta == 2) {
+                    if ((ci != null)) {
+                        System.out.println("Digite o valor do depósito: R$");
+                        valor = input.nextDouble();
+                        cp.depositar(valor);
+                    } else {
+                        System.out.println("Você não possui esta conta");
+                    }
+                } else System.out.println("Digite um número válido");
 
             } else if (opcaoMenu == 4) {
                 System.out.println("Qual tipo de conta?\n1.Poupança\n2.Investimento");
                 opcaoConta = input.nextInt();
                 if (opcaoConta == 1) {
                     if ((cp != null)) {
-                        System.out.println("Saldo Conta Poupança : R$" + cp.getSaldo());
+                        System.out.println("Saldo Conta Poupança: R$" + cp.getSaldo());
                     } else {
                         System.out.println("Você não possui esta conta");
                     }
                 } else if (opcaoConta == 2) {
                     if ((ci != null)) {
-                        System.out.println("Saldo Conta Investimento : R$" + ci.getSaldo());
+                        System.out.println("Saldo Conta Investimento: R$" + ci.getSaldo());
                     } else {
                         System.out.println("Você não possui esta conta");
                     }
